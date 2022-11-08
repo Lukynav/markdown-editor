@@ -1,6 +1,7 @@
 export const Heading = ({ index, text }) => {
   const headingIndex = text.match(/#/g).length
-  text = text.slice(headingIndex)
+  text = text.slice(text.indexOf('#')) // remove the spaces before the #
+  text = text.slice(headingIndex) // remove the #
   return (
     <div className='mb-2 text-white' index={index}>
       {
@@ -14,9 +15,3 @@ export const Heading = ({ index, text }) => {
     </div>
   )
 }
-
-/*
-<p className='mb-4 border-b-2 border-gray-700 flex text-gray-300' key={index}>
-            {text}
-        </p>
-*/
