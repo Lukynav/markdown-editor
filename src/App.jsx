@@ -7,7 +7,7 @@ export default function App () {
   const [text, setText] = useState([])
   return (
     <Layout>
-      <section className='justify-center gap-2 flex'>
+      <section className='w-full h-full flex justify-center gap-2'>
         <CodeEditor setText={setText} />
         <MarkdownViewer text={text} />
       </section>
