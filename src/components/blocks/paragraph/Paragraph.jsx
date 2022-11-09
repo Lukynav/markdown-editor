@@ -7,10 +7,7 @@ export const Paragraph = ({ index, text }) => {
       {paragraph.map(e => {
         if (e.type == 'text') return e.content
         if (e.type == 'bold') return (<b className='text-bold text-gray-200'>{e.content}</b>)
-<<<<<<< HEAD
-=======
         if (e.type == 'link') return (<a href={e.url} className='text-blue-400 font-bold'>{e.content}</a>)
->>>>>>> design
       })}
     </p>
   )
